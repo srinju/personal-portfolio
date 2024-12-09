@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Terminal } from 'lucide-react';
 import { TypewriterEffect } from './TypewriterEffect';
