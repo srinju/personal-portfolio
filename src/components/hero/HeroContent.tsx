@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Terminal } from 'lucide-react';
 import { TypewriterEffect } from './TypewriterEffect';
+import profilepic from '../../images/pfp2.jpg'
 
 export const HeroContent = () => {
   return (
@@ -18,7 +19,7 @@ export const HeroContent = () => {
           className="relative inline-block"
         >
           <img 
-            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200&q=80"
+            src={profilepic}
             alt="Profile"
             className="w-40 h-40 rounded-full border-4 border-blue-500 shadow-xl"
           />
