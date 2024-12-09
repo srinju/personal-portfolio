@@ -56,10 +56,10 @@ export const HeroContent = () => {
         transition={{ delay: 1 }}
       >
         {[
-          { icon: <Github size={28} />, href: "https://github.com", color: "hover:text-blue-500" },
-          { icon: <Linkedin size={28} />, href: "https://linkedin.com", color: "hover:text-blue-400" },
-          { icon: <Mail size={28} />, href: "mailto:contact@example.com", color: "hover:text-purple-500" }
-        ].map((social, index) => (
+          { icon: <Github size={28} />, href: "https://github.com/srinju", color: "hover:text-blue-500" },
+          { icon: <Linkedin size={28} />, href: "https://www.linkedin.com/in/srinjoydasdev/", color: "hover:text-blue-400" },
+          { icon: <Mail size={28} />, href: "mailto:srinjoydas1104@gmail.com", color: "hover:text-purple-500" }
+        ].map((social) => (
           <motion.a
             key={social.href}
             href={social.href}
