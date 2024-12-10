@@ -5,13 +5,14 @@ import * as THREE from 'three';
 const Particles = () => {
   const points = useRef();
   
-  const particlesCount = 2000;
+  // Increase particle count for fuller effect
+  const particlesCount = 3000;
   const positions = useMemo(() => {
     const positions = new Float32Array(particlesCount * 3);
     for (let i = 0; i < particlesCount; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+      positions[i * 3] = (Math.random() - 0.5) * 15;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 15;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 15;
     }
     return positions;
   }, []);
@@ -20,8 +21,8 @@ const Particles = () => {
     const time = state.clock.getElapsedTime();
     for (let i = 0; i < particlesCount; i++) {
       const i3 = i * 3;
-      points.current.geometry.attributes.position.array[i3] += Math.sin(time + i) * 0.001;
-      points.current.geometry.attributes.position.array[i3 + 1] += Math.cos(time + i) * 0.001;
+      points.current.geometry.attributes.position.array[i3] += Math.sin(time + i) * 0.0005;
+      points.current.geometry.attributes.position.array[i3 + 1] += Math.cos(time + i) * 0.0005;
     }
     points.current.geometry.attributes.position.needsUpdate = true;
   });
@@ -37,10 +38,10 @@ const Particles = () => {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.02}
+        size={0.025} // Increased from 0.015 to 0.025
         color="#4299e1"
         transparent
-        opacity={0.6}
+        opacity={0.4}
         sizeAttenuation
       />
     </points>

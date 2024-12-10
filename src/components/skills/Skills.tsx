@@ -40,10 +40,7 @@ const skillCategories = [
 
 export const Skills: React.FC = () => {
   return (
-    <div className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-gray-900/50 to-gray-900" />
-      
+    <div className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
